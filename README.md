@@ -4,6 +4,7 @@
 
 - Comando para limpeza (na raiz do projeto):
 rmdir /s /q node_modules
+rmdir /s /q .next
 del package-lock.json
 
 - Se você acabou de baixar o projeto e ele não tem a pasta node_modules, siga estes passos:
