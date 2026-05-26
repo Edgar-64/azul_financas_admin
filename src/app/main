@@ -1,0 +1,14 @@
+// No main.ts do seu BACKEND (NestJS)
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  
+  // 👈 ISSO AQUI PRECISA ESTAR ATIVADO
+  app.enableCors({
+    origin: '*', // Em produção, mude para a URL do seu front
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  });
+
+  await app.listen(3000); // Ou a porta que você configurou
+}
+bootstrap();
